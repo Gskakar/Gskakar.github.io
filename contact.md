@@ -22,7 +22,7 @@ title: Contact
     <h2>Résumé</h2>
     <p>You can download my current résumé here:</p>
     <p>
-      <a class="button button-primary" href="/assets/Gurkeerat_SK_Resume.pdf">Download résumé</a>
+      <a class="button button-primary" href="/assets/Gurkeerat_Kakar_Resume(3).pdf">Download résumé</a>
     </p>
 
   </div>
