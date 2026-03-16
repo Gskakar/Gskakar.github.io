@@ -9,14 +9,15 @@ title: Experience
   <h3>Research Assistant · University of Alberta</h3>
   <p class="meta-row">Sept 2025 - Present</p>
   <div class="chip-row">
-    <span class="tag">R</span>
+    <span class="tag">RStudio</span>
+    <span class="tag">Tableau</span>
     <span class="tag">Socioeconomic Analysis</span>
-    <span class="tag">Power BI</span>
   </div>
   <ul>
-    <li>Analyze large-scale household survey datasets using <strong>R</strong>, focused on rural/urban socioeconomic patterns.</li>
-    <li>Build spatial and trend-driven dashboards (including choropleth views) for policy and research interpretation.</li>
+    <li>Assist Professor Ikechukwu (Ike) Nwaka, in analyzing large-scale household survey datasets using <strong>RStudio & Tableau</strong>, focused on rural/urban & zonal socioeconomic patterns.</li>
+    <li>Build spatial and trend-driven dashboards for policy and research interpretation.</li>
     <li>Contribute to data cleaning, modeling, and evidence-backed reporting workflows.</li>
+    <li>Provide academic support through <strong>Canvas LMS</strong> setup, exam invigilation, proctoring, and evaluation.</li>
   </ul>
 </div>
 
@@ -26,12 +27,12 @@ title: Experience
   <div class="chip-row">
     <span class="tag">MySQL</span>
     <span class="tag">Power BI</span>
-    <span class="tag">A/B Testing</span>
+    <span class="tag">User Analytics</span>
   </div>
   <ul>
-    <li>Automated <strong>MySQL → Power BI</strong> reporting workflows, reducing manual reporting effort by <strong>~30%</strong>.</li>
-    <li>Designed KPI dashboards that supported a <strong>~20% increase in course completion rates</strong>.</li>
-    <li>Performed validation, A/B testing, and behavior analysis to support product decisions.</li>
+    <li>Automated <strong>MySQL → Power BI</strong> reporting workflows to streamline BI reporting and reduce manual data preparation time.</li>
+    <li>Partnered with management to define <strong>company KPIs</strong>, identify data quality issues, and improve metric reliability for decision-making.</li>
+    <li>Analyzed user engagement trends through <strong>visual analytics and segmentation</strong>, contributing to a <strong>~20% increase in user interaction</strong> and improved course enrollments and completion rates.</li>
   </ul>
   <a class="button cta-inline" href="/assets/lor_skillup.pdf" target="_blank">Reference Letter: SkillUp</a>
 </div>
@@ -40,8 +41,8 @@ title: Experience
   <h3>Vice President Internal · University of Alberta International Students' Association</h3>
   <p class="meta-row">May 2024 - Apr 2025</p>
   <div class="chip-row">
-    <span class="tag">Operations</span>
-    <span class="tag">Leadership</span>
+    <span class="tag">Team recruitments</span>
+    <span class="tag">Event Operation</span>
     <span class="tag">Community Impact</span>
   </div>
   <ul>

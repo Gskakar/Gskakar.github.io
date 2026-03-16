@@ -5,20 +5,20 @@ title: Home
 
 <div class="hero">
   <div class="hero-text">
-    <p class="hero-kicker">Data Science · Analytics · Storytelling</p>
+    <p class="hero-kicker">Data Science & Analytics · BI Reporting · Storytelling</p>
     <h1>Hello, I’m Gurkeerat Singh Kakar</h1>
     <p><strong>Data Science &amp; Analytics enthusiast,</strong> transforming complex datasets into clear insights, actionable strategies, and better decisions.</p>
-    <p>I'm a Computing Science student at the <strong>University of Alberta (Class of 2027)</strong>, focused on building practical, high-impact analytics solutions.</p>
+    <p>I'm a Computing Science student at the <strong>University of Alberta (Exp. Graduation: April 2027)</strong>, focused on building practical, high-impact analytics solutions.</p>
     <div class="chip-row">
       <span class="tag">Python</span>
-      <span class="tag">R</span>
+      <span class="tag">RStudio</span>
       <span class="tag">SQL</span>
       <span class="tag">Power BI</span>
       <span class="tag">Tableau</span>
     </div>
     <div class="hero-actions">
       <a class="button button-primary" href="/projects/">Explore Projects</a>
-      <a class="button" href="/experience/">View Experience</a>
+      <a class="button" href="/experience/">View Experiences</a>
     </div>
   </div>
 
@@ -30,8 +30,8 @@ title: Home
 <div class="card">
   <h2>Current Focus</h2>
   <ul>
-    <li>B.Sc. in Computing Science (Specialization), pursuing Applied Data Science pathways.</li>
-    <li>Science Internship (Co-op) Program candidate (4-12 month full-time terms).</li>
+    <li>B.Sc. in Computing Science (Specialization), pursuing Ualberta's Applied Data Science Certification.</li>
+    <li>Science Internship (Co-op) Program candidate (4-16 months, full-time).</li>
     <li>Recipient of the <strong>UASU Students’ Union Global Connection Award</strong>.</li>
     <li>Growing depth in analytical modelling, reporting, and insight communication.</li>
   </ul>
@@ -42,7 +42,7 @@ title: Home
   <ul>
     <li>Preparing and transforming datasets for robust analysis.</li>
     <li>Designing interactive BI dashboards and KPI reports.</li>
-    <li>Running trend and statistical analysis using Python and R.</li>
+    <li>Running trend and statistical analysis using Python and RStudio.</li>
     <li>Automating data workflows with SQL + Python.</li>
     <li>Collaborating with Agile workflows and Git/GitHub version control.</li>
   </ul>
@@ -51,7 +51,7 @@ title: Home
 <div class="card">
   <h2>Experience Snapshot</h2>
   <ul>
-    <li><strong>Research Assistant - University of Alberta:</strong> socioeconomic data analysis, R ETL workflows, and policy-facing dashboards.</li>
+    <li><strong>Research Assistant - University of Alberta:</strong> socioeconomic data analysis, RStudio, ETL workflows, and policy-facing dashboards.</li>
     <li><strong>Data/Business Analyst Intern - Skill-Up:</strong> automated pipelines, BI dashboards, and process optimization.</li>
   </ul>
   <a class="button cta-inline" href="/projects/">View Projects →</a>
