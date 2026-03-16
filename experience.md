@@ -14,7 +14,7 @@ title: Experience
     <span class="tag">Socioeconomic Analysis</span>
   </div>
   <ul>
-    <li>Assist Professor Ikechukwu (Ike) Nwaka, in analyzing large-scale household survey datasets using <strong>RStudio & Tableau</strong>, focused on rural/urban & zonal socioeconomic patterns.</li>
+    <li>Assisting Professor Ikechukwu (Ike) Nwaka, in analyzing large-scale household survey datasets using <strong>RStudio & Tableau</strong>, focused on rural/urban & zonal socioeconomic patterns.</li>
     <li>Build spatial and trend-driven dashboards for policy and research interpretation.</li>
     <li>Contribute to data cleaning, modeling, and evidence-backed reporting workflows.</li>
     <li>Provide academic support through <strong>Canvas LMS</strong> setup, exam invigilation, proctoring, and evaluation.</li>
