@@ -25,12 +25,19 @@ title: About
         More recently, I’ve also explored <strong>responsible data practices</strong>, including fairness, bias detection, and privacy-aware data handling in analytical pipelines.
       </p>
     </div>
+  </section>
 
-    <div class="about-feature">
-      <img src="/assets/IMG_7685.jpg" alt="Music performance" class="about-feature-image">
+  <div class="about-images">
+    <div class="about-img">
+      <img src="/assets/images/guitar.jpg" alt="Guitar performance">
       <p class="about-caption">Amateur singer & performer</p>
     </div>
-  </section>
+
+    <div class="about-img">
+      <img src="/assets/images/football.jpg" alt="Football team">
+      <p class="about-caption">Football Intramural League</p>
+    </div>
+  </div>
 
   <hr class="about-divider">
 
@@ -56,11 +63,6 @@ title: About
       <div class="about-box">
         🍳 <strong>Cooking</strong>
         <p>Cooking is my pause button when life starts moving too fast.</p>
-      </div>
-
-      <div class="about-box about-box-image">
-        <img src="/assets/intramural_pic.jpeg" alt="Football intramural team" class="about-inline-image">
-        <p class="about-caption">Football Intramural League</p>
       </div>
     </div>
   </section>
