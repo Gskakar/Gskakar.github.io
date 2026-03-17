@@ -7,16 +7,14 @@ title: About
 
   <h1 class="about-title">About Me</h1>
 
-  <div class="about-layout">
-
-    <!-- Main Content -->
+  <section class="about-hero">
     <div class="about-main">
       <p class="about-intro">
-        I’m a tech-focused student at the <strong>University of Alberta</strong> with a strong interest in uncovering patterns and turning data into meaningful insights.
+        I’m a data-focused student at the <strong>University of Alberta</strong> with a strong interest in uncovering patterns and turning data into meaningful insights.
       </p>
 
       <p>
-        My interest in data science grew through relevant coursework in <strong>statistics, data analysis, and database systems</strong>, where I learned how to structure, analyze, and interpret data to support decision-making.
+        My interest in data science grew through coursework in <strong>statistics, data analysis, and database systems</strong>, where I learned how to structure, analyze, and interpret data to support decision-making.
       </p>
 
       <p>
@@ -28,48 +26,43 @@ title: About
       </p>
     </div>
 
-    <!-- Image Section -->
-    <div class="about-images">
-      <div class="about-card">
-        <img src="/assets/IMG_7685.jpg" alt="Music performance">
-        <p>Amateur singer & performer</p>
-      </div>
-
-      <div class="about-card">
-        <img src="/assets/intramural_pic.jpeg" alt="Football">
-        <p>Football Intramural League</p>
-      </div>
+    <div class="about-feature">
+      <img src="/assets/IMG_7685.jpg" alt="Music performance" class="about-feature-image">
+      <p class="about-caption">Amateur singer & performer</p>
     </div>
-
-  </div>
+  </section>
 
   <hr class="about-divider">
 
-  <!-- Outside Section -->
-  <div class="about-extra">
+  <section class="about-extra">
     <h2>Beyond Data</h2>
 
     <div class="about-grid">
       <div class="about-box">
         ⚽ <strong>Football</strong>
-        <p>Interested in European football, especially tactics and performance analysis.</p>
+        <p>I closely follow European football, especially its tactical and analytical side.</p>
       </div>
 
       <div class="about-box">
         🎵 <strong>Music</strong>
-        <p>Compose, experiment with melodies, and perform when possible.</p>
+        <p>Music is a creative outlet where I compose, experiment with melodies, and perform when I can.</p>
       </div>
 
       <div class="about-box">
         📚 <strong>Reading</strong>
-        <p>Focus on habits, productivity, and insightful biographies.</p>
+        <p>I enjoy reading about habits, routines, productivity, and thoughtful biographies.</p>
       </div>
 
       <div class="about-box">
         🍳 <strong>Cooking</strong>
-        <p>A way to slow down and reset outside of work.</p>
+        <p>Cooking is my pause button when life starts moving too fast.</p>
+      </div>
+
+      <div class="about-box about-box-image">
+        <img src="/assets/intramural_pic.jpeg" alt="Football intramural team" class="about-inline-image">
+        <p class="about-caption">Football Intramural League</p>
       </div>
     </div>
-  </div>
+  </section>
 
 </div>
