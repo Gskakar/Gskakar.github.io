@@ -29,12 +29,12 @@ title: About
 
   <div class="about-images">
     <div class="about-img">
-      <img src="/assets/images/guitar.jpg" alt="Guitar performance">
+      <img src="/assets/IMG_7685.jpg" alt="Guitar performance">
       <p class="about-caption">Amateur singer & performer</p>
     </div>
 
-    <div class="about-img">
-      <img src="/assets/images/football.jpg" alt="Football team">
+    <div class="about-images">
+      <img src="/assets/intramural_pic.jpeg" alt="Football team">
       <p class="about-caption">Football Intramural League</p>
     </div>
   </div>
