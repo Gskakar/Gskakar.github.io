@@ -5,7 +5,8 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <div class="bg-orbit"></div>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <div class="interactive-bg" aria-hidden="true">
     <span class="bg-blob blob-a"></span>
     <span class="bg-blob blob-b"></span>
@@ -15,22 +16,22 @@
   <header class="site-header">
     <nav class="nav">
       <div class="nav-brand">
-        <a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit;">
+        <a href="{{ '/' | relative_url }}" class="brand-link">
           Gurkeerat Singh Kakar
         </a>
       </div>
       <div class="nav-links">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/projects/' | relative_url }}">Projects</a>
-        <a href="{{ '/experience/' | relative_url }}">Experience</a>
-        <a href="{{ '/awards/' | relative_url }}">Achievements</a>
-        <a href="{{ '/about/' | relative_url }}">About</a>
-        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+        <a href="{{ '/projects/' | relative_url }}" class="{% if page.url contains '/projects' %}active{% endif %}">Projects</a>
+        <a href="{{ '/experience/' | relative_url }}" class="{% if page.url contains '/experience' %}active{% endif %}">Experience</a>
+        <a href="{{ '/awards/' | relative_url }}" class="{% if page.url contains '/awards' %}active{% endif %}">Achievements</a>
+        <a href="{{ '/about/' | relative_url }}" class="{% if page.url contains '/about' %}active{% endif %}">About</a>
+        <a href="{{ '/contact/' | relative_url }}" class="{% if page.url contains '/contact' %}active{% endif %}">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main class="container">
+  <main id="main-content" class="container">
     {{ content }}
   </main>
 
