@@ -9,15 +9,16 @@ title: Experience
   <h3>Dashboard Development Intern · AI4DA</h3>
   <p class="meta-row">Mar 2026 - Present</p>
   <div class="chip-row">
-    <span class="tag">Tableau</span>
     <span class="tag">Python</span>
-    <span class="tag">RStudio</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">Web of Science / InCites</span>
   </div>
   <ul>
-    <li>Developing interactive, multi-dashboard <strong>Tableau</strong> workbooks analyzing the <strong>Energy Trilemma</strong> — energy accessibility, reliability, and sustainability — from large-scale household survey data.</li>
-    <li>Design regional and wave-over-wave visualizations that surface disparities in electricity reliability, clean energy adoption, appliance ownership, and digital connectivity.</li>
-    <li>Build and validate <strong>Python & RStudio</strong> preprocessing pipelines, ensuring reliable dashboard outputs through standardized cleaning and aggregation checks.</li>
-    <li>Translate analytical findings into <strong>BI reports and insight presentations</strong> for research and policy audiences.</li>
+    <li>Reconstructing <strong>ShanghaiRanking's GRAS</strong> (Global Ranking of Academic Subjects) scoring methodology for the University of Alberta across <strong>Business Administration, Finance, and Management</strong>, validating reconstructed indicator scores against officially reported results.</li>
+    <li>Built a <strong>what-if marginal-value model</strong> quantifying the score impact of each additional publication and the growth required to reach world and Canadian benchmark institutions.</li>
+    <li>Developed a <strong>Python/pandas visualization pipeline</strong> generating 16 leadership-facing charts from Web of Science & InCites exports — benchmark comparisons, growth-factor analysis, and faculty/researcher publication breakdowns.</li>
+    <li>Automated data standardization and researcher-identification workflows: deduplication, journal-name normalization, and multi-source Faculty/Department lookup (UAlberta directory, ORCID, OpenAlex).</li>
+    <li>Delivered a full <strong>written analysis report, methodology workflow document, and leadership slide decks</strong> summarizing findings for decision-makers.</li>
   </ul>
 </div>
 
