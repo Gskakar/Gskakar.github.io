@@ -10,19 +10,28 @@ title: About
   <section class="about-hero">
     <div class="about-main">
       <p class="about-intro">
-        I’m a data-focused student at the <strong>University of Alberta</strong> with a strong interest in uncovering patterns and turning data into meaningful insights.
+        I grew up in <strong>Noida, India</strong>, and moved to Edmonton in 2022 to study
+        <strong>Computing Science at the University of Alberta</strong>. What hooked me on data wasn’t the
+        code — it was the moment a messy spreadsheet turns into a chart that changes someone’s mind.
       </p>
 
       <p>
-        My interest in data science grew through coursework in <strong>statistics, data analysis, and database systems</strong>, where I learned how to structure, analyze, and interpret data to support decision-making.
+        Since then I’ve chased that moment in very different places: reconstructing
+        <strong>ShanghaiRanking’s scoring methodology</strong> so business school leadership could see exactly
+        where they stand, analyzing <strong>household survey data</strong> to surface socioeconomic patterns for
+        policy research, and automating BI reporting for an ed-tech company halfway across the continent.
       </p>
 
       <p>
-        I’ve since worked on projects involving <strong>Python, R, SQL, Tableau, and Power BI</strong>, building dashboards and analytical workflows that transform raw data into clear, actionable results.
+        My day-to-day toolkit is <strong>Python, R, SQL, Tableau, and Power BI</strong> — but the part I care
+        most about is the last mile: turning analysis into dashboards, reports, and presentations that
+        non-technical audiences actually trust and use.
       </p>
 
       <p>
-        More recently, I’ve also explored <strong>responsible data practices</strong>, including fairness, bias detection, and privacy-aware data handling in analytical pipelines.
+        I also care about doing this responsibly. Through coursework and projects like my
+        <strong>credit card fraud detection analysis</strong>, I’ve worked on fairness checks, bias detection,
+        and privacy-aware data handling — because insight that mistreats the people behind the data isn’t insight.
       </p>
     </div>
   </section>
@@ -47,7 +56,7 @@ title: About
     <div class="about-grid">
       <div class="about-box">
         ⚽ <strong>Football</strong>
-        <p>I closely follow European football, especially its tactical and analytical side.</p>
+        <p>I closely follow European football, especially its tactical and analytical side — and play in UAlberta’s intramural league.</p>
       </div>
 
       <div class="about-box">

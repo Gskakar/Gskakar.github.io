@@ -26,6 +26,11 @@ Here are a few of my academic, leadership, and technical recognitions:
 
 ## Certifications
 
+- **HackerRank Python Skill Certification**
+- **GLA Data Visualization with Power BI & Tableau**
+- **DUCAT Core Python Certification**
+- **TOEFL Language Certification** — scored 104/120
+
 <div class="cert-grid">
   <div class="cert-card">
     <img src="/assets/powerbi_certificate.png" alt="Power BI Certificate">

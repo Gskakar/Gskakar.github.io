@@ -10,13 +10,14 @@ title: Contact
 
     <div class="contact-main">
       <p class="contact-intro">
-        I’m open to opportunities across the <strong>IT and data space</strong>, with particular interest in
-        <strong>data science, analytics, machine learning, and emerging AI applications</strong>.
+        I’m based in <strong>Edmonton, Alberta</strong>, and currently looking for
+        <strong>data science and analytics internships or co-op placements (4–16 months)</strong> —
+        roles where I can build pipelines, dashboards, and analysis that people actually use to make decisions.
       </p>
 
       <p>
-        Whether it is for internships, project collaborations, or professional opportunities,
-        I’d be happy to connect.
+        The fastest way to reach me is email — I usually reply within a day.
+        For collaborations, projects, or just to talk data, my inbox is always open.
       </p>
 
       <ul class="contact-list">
@@ -28,10 +29,11 @@ title: Contact
 
     <div class="card contact-card">
       <h2>Résumé</h2>
-      <p>You can view my latest résumé below.</p>
+      <p class="card-muted">Updated July 2026</p>
+      <p>One page covering my experience at AI4DA, UofA research, and Skill-Up, plus projects and skills.</p>
       <p>
         <a class="button button-primary"
-           href="/assets/Gurkeerat_Kakar_Resume%20(2).pdf"
+           href="/assets/Gurkeerat_Kakar_Resume.pdf"
            target="_blank"
            rel="noopener">
           View Résumé
