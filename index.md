@@ -31,6 +31,7 @@ title: Home
   <h2>Current Focus</h2>
   <ul>
     <li>B.Sc. in Computing Science (Specialization), pursuing Ualberta's Applied Data Science Certification.</li>
+    <li>Dashboard Development Intern with <strong>AI4DA</strong>, building Energy Trilemma analytics dashboards.</li>
     <li>Science Internship (Co-op) Program candidate (4-16 months, full-time).</li>
     <li>Recipient of the <strong>UASU Students’ Union Global Connection Award</strong>.</li>
     <li>Growing depth in analytical modelling, reporting, and insight communication.</li>
@@ -51,6 +52,7 @@ title: Home
 <div class="card">
   <h2>Experience Snapshot</h2>
   <ul>
+    <li><strong>Dashboard Development Intern - AI4DA:</strong> interactive Tableau dashboards and Python/R preprocessing pipelines for Energy Trilemma household survey analysis.</li>
     <li><strong>Research Assistant - University of Alberta:</strong> socioeconomic data analysis, RStudio, ETL workflows, and policy-facing dashboards.</li>
     <li><strong>Data/Business Analyst Intern - Skill-Up:</strong> automated pipelines, BI dashboards, and process optimization.</li>
   </ul>

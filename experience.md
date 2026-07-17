@@ -6,6 +6,22 @@ title: Experience
 # Experience
 
 <div class="card experience-card">
+  <h3>Dashboard Development Intern · AI4DA</h3>
+  <p class="meta-row">Mar 2026 - Present</p>
+  <div class="chip-row">
+    <span class="tag">Tableau</span>
+    <span class="tag">Python</span>
+    <span class="tag">RStudio</span>
+  </div>
+  <ul>
+    <li>Developing interactive, multi-dashboard <strong>Tableau</strong> workbooks analyzing the <strong>Energy Trilemma</strong> — energy accessibility, reliability, and sustainability — from large-scale household survey data.</li>
+    <li>Design regional and wave-over-wave visualizations that surface disparities in electricity reliability, clean energy adoption, appliance ownership, and digital connectivity.</li>
+    <li>Build and validate <strong>Python & RStudio</strong> preprocessing pipelines, ensuring reliable dashboard outputs through standardized cleaning and aggregation checks.</li>
+    <li>Translate analytical findings into <strong>BI reports and insight presentations</strong> for research and policy audiences.</li>
+  </ul>
+</div>
+
+<div class="card experience-card">
   <h3>Research Assistant · University of Alberta</h3>
   <p class="meta-row">Sept 2025 - Present</p>
   <div class="chip-row">
