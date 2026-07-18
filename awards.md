@@ -29,7 +29,7 @@ Here are a few of my academic, leadership, and technical recognitions:
 - **HackerRank Python Skill Certification**
 - **GLA Data Visualization with Power BI & Tableau**
 - **DUCAT Core Python Certification**
-- **TOEFL Language Certification** — scored 104/120
+- **TOEFL Language Certification** - scored 104/120
 
 <div class="cert-grid">
   <div class="cert-card">
