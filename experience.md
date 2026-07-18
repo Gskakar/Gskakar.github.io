@@ -7,17 +7,17 @@ title: Experience
 
 <div class="card experience-card">
   <h3>Dashboard Development Intern · AI Centre for Decision Analytics (AI4DA)</h3>
-  <p class="meta-row">Apr 2026 - Present · Edmonton, AB</p>
+  <p class="meta-row">Apr 2026 - July 2026 · Edmonton, AB</p>
   <div class="chip-row">
     <span class="tag">Python</span>
-    <span class="tag">Pandas</span>
-    <span class="tag">Web of Science / InCites</span>
+    <span class="tag">Excel</span>
+    <span class="tag">Benchmarking Analytics</span>
   </div>
   <ul>
-    <li>Reverse-engineering <strong>ShanghaiRanking's GRAS</strong> (Global Ranking of Academic Subjects) scoring methodology to benchmark the Alberta School of Business against peer institutions across <strong>Business Administration, Finance, and Management</strong>.</li>
-    <li>Built <strong>Python/pandas data pipelines</strong> to extract, clean, and standardize publication and researcher datasets across subjects and years, from Web of Science and InCites exports.</li>
-    <li>Developed a <strong>what-if marginal-value model</strong> and a 16-chart visualization suite quantifying growth needed to reach world and Canadian benchmark institutions.</li>
-    <li>Collaborate with <strong>ASB deans and senior faculty</strong> — leading presentations and delivering written reports and workflow documentation that validate findings for leadership.</li>
+    <li>Reverse-engineering <strong>ShanghaiRanking's GRAS</strong> (Global Ranking of Academic Subjects) scoring methodology to benchmark the Alberta School of Business against peer institutions.</li>
+    <li>Built <strong>Python data pipelines</strong> to extract, clean, and standardize publication and researcher datasets across subjects and years, from Web of Science and InCites exports.</li>
+    <li>Developed a <strong>what-if marginal value model</strong> and a 16-chart visualization suite quantifying growth for reaching benchmark targets.</li>
+    <li>Collaborated with <strong>ASB deans and senior faculty</strong>, leading presentations and delivering workflow documentation that validate findings for leadership.</li>
   </ul>
 </div>
 
@@ -76,7 +76,7 @@ title: Experience
   </div>
   <ul>
     <li>Revived the <strong>I-Card discount program</strong> to support student affordability and restructured internal teams to improve collaboration.</li>
-    <li>Led intercultural initiatives supporting a community of <strong>9,000+ international students</strong>, and proposed mental-wellness workshops for them.</li>
+    <li>Led intercultural initiatives supporting a community of <strong>9,000+ international students</strong>, through proposed events & workshops.</li>
     <li>Received the <strong>UASU Global Connection Award</strong> for inclusion and campus engagement.</li>
   </ul>
   <a class="button cta-inline" href="/assets/lor_isa.pdf" target="_blank">Reference Letter: UAISA</a>
@@ -86,6 +86,6 @@ title: Experience
   <h3>Earlier Roles · JD Sports & Cactus Club Cafe</h3>
   <p class="meta-row">Summer 2024 · Sales Associate & Line Cook</p>
   <ul>
-    <li>Customer-facing and high-pressure kitchen roles that built the habits I still lean on: clear communication, timing precision, and delivering under pressure.</li>
+    <li>High pressure & customer facing roles that built the habits I still lean on: clear communication, timing precision, and delivering under pressure.</li>
   </ul>
 </div>
