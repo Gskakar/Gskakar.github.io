@@ -10,28 +10,20 @@ title: About
   <section class="about-hero">
     <div class="about-main">
       <p class="about-intro">
-        I grew up in <strong>Noida, India</strong>, and moved to Edmonton in 2022 to study
-        <strong>Computing Science at the University of Alberta</strong>. What hooked me on data wasn’t the
-        code — it was the moment a messy spreadsheet turns into a chart that changes someone’s mind.
+        I grew up in <strong>Delhi, India</strong>, and moved to Edmonton in 2022 to study
+        <strong>Computing Science at the University of Alberta</strong>, where my interest in data & analytics took shape.
       </p>
 
       <p>
-        Since then I’ve chased that moment in very different places: reconstructing
-        <strong>ShanghaiRanking’s scoring methodology</strong> so business school leadership could see exactly
-        where they stand, analyzing <strong>household survey data</strong> to surface socioeconomic patterns for
-        policy research, and automating BI reporting for an ed-tech company halfway across the continent.
+        That interest grew through relevant coursework in <strong>statistics, data analysis, and database systems</strong>, learning to structure, analyze, and interpret data to support decisions.
       </p>
 
       <p>
-        My day-to-day toolkit is <strong>Python, R, SQL, Tableau, and Power BI</strong> — but the part I care
-        most about is the last mile: turning analysis into dashboards, reports, and presentations that
-        non-technical audiences actually trust and use.
+        I've since worked on industry projects involving <strong> Python, SQL, R, Power BI & Tableau </strong>, transforming raw data into visuals informing for actionable insights.  
       </p>
 
       <p>
-        I also care about doing this responsibly. Through coursework and projects like my
-        <strong>credit card fraud detection analysis</strong>, I’ve worked on fairness checks, bias detection,
-        and privacy-aware data handling — because insight that mistreats the people behind the data isn’t insight.
+        More recently, I’ve been exploring <strong>responsible data practices</strong> like fairness, bias detection, and privacy-aware data handling in analytical pipelines.
       </p>
     </div>
   </section>
@@ -56,17 +48,17 @@ title: About
     <div class="about-grid">
       <div class="about-box">
         ⚽ <strong>Football</strong>
-        <p>I closely follow European football, especially its tactical and analytical side — and play in UAlberta’s intramural league.</p>
+        <p>I closely follow European football, especially its tactical side, and still play in amateur leagues. \</p>
       </div>
 
       <div class="about-box">
         🎵 <strong>Music</strong>
-        <p>Music is a creative outlet where I compose, experiment with melodies, and perform when I can.</p>
+        <p>Music is a creative outlet where I compose, experiment with melodies, and perform wherever I find an opportunity.</p>
       </div>
 
       <div class="about-box">
         📚 <strong>Reading</strong>
-        <p>I enjoy reading about habits, routines, productivity, and thoughtful biographies.</p>
+        <p>I enjoy reading biographies about life routines, productive habits and thoughtfulness.</p>
       </div>
 
       <div class="about-box">
