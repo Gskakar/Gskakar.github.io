@@ -48,7 +48,7 @@ title: About
     <div class="about-grid">
       <div class="about-box">
         ⚽ <strong>Football</strong>
-        <p>I closely follow European football, especially its tactical side, and still play in amateur leagues. \</p>
+        <p>I closely follow European football, especially its tactical side, and still play in amateur leagues. </p>
       </div>
 
       <div class="about-box">
