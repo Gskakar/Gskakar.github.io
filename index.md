@@ -8,7 +8,7 @@ title: Home
     <p class="hero-kicker">Data Science & Analytics · BI Reporting · Storytelling</p>
     <h1>Hello, I’m Gurkeerat Singh Kakar</h1>
     <p><strong>Data Science &amp; Analytics enthusiast</strong> turning messy, real-world datasets into clear insights, actionable strategies, and better decisions.</p>
-    <p>I’m a <strong>Computing Science (Specialization)</strong> student at the University of Alberta (exp. Apr 2027), focused on building practical, high-impact analytical solutions.</p>
+    <p>I’m a <strong>Computing Science (Specialization)</strong> student at the University of Alberta (graduating Dec 2026), focused on building practical, high-impact analytical solutions.</p>
     <div class="chip-row">
       <span class="tag">Python</span>
       <span class="tag">SQL</span>
