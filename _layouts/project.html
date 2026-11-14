@@ -1,0 +1,87 @@
+---
+layout: default
+---
+{%- assign sorted = site.projects | sort: "order" -%}
+{%- assign idx = 0 -%}
+{%- for p in sorted -%}{%- if p.url == page.url -%}{%- assign idx = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- assign has_links = false -%}
+{%- for l in page.links -%}{%- if l.url and l.url != "" -%}{%- assign has_links = true -%}{%- endif -%}{%- endfor -%}
+<article class="case">
+  <p class="breadcrumb"><a href="{{ '/projects/' | relative_url }}">Projects</a> / {{ page.category }}</p>
+
+  <header class="case-head">
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      {{ page.role }}{% if page.context and page.context != "" %} · {{ page.context }}{% endif %}{% if page.team and page.team != "" %} · {{ page.team }}{% endif %}{% if page.period and page.period != "" %} · {{ page.period }}{% endif %}
+    </p>
+    {%- if page.takeaway %}
+    <p class="case-lead">{{ page.takeaway }}</p>
+    {%- endif %}
+  </header>
+
+  <div class="case-grid">
+    <div class="case-body prose">
+      {{ content }}
+    </div>
+
+    <aside class="case-aside">
+      {%- if page.metrics and page.metrics.size > 0 %}
+      <dl class="figures figures--stacked">
+        {%- for m in page.metrics %}
+        <div><dt>{{ m.value }}</dt><dd>{{ m.label }}</dd></div>
+        {%- endfor %}
+      </dl>
+      {%- endif %}
+
+      <h2 class="aside-title">Tools</h2>
+      <p class="tools">{{ page.tools | join: ", " }}</p>
+
+      {%- if has_links %}
+      <h2 class="aside-title">Links</h2>
+      <ul class="link-list">
+        {%- for l in page.links %}{% include link-button.html link=l %}{% endfor %}
+      </ul>
+      {%- endif %}
+
+      {%- if page.note and page.note != "" %}
+      <p class="small">{{ page.note }}</p>
+      {%- endif %}
+    </aside>
+  </div>
+
+  {%- if page.dashboard %}
+  {%- assign dash_src = "/assets/data/" | append: page.dashboard | append: ".json" %}
+  <section class="block" id="dashboard" aria-label="Interactive dashboard">
+    <div class="dash" data-dashboard="{{ page.dashboard }}" data-src="{{ dash_src | relative_url }}"></div>
+  </section>
+  {%- elsif page.embed and page.embed != "" %}
+  <section class="block" id="dashboard">
+    <div class="embed-frame">
+      <iframe src="{{ page.embed }}" title="{{ page.title }} dashboard" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- if page.gallery and page.gallery.size > 0 %}
+  <section class="block" aria-labelledby="gallery-title">
+    <h2 class="block-title" id="gallery-title">Screenshots</h2>
+    <div class="gallery">
+      {%- for g in page.gallery %}{% if g.src and g.src != "" %}
+      <figure>
+        <a href="{{ g.src | relative_url }}" data-lightbox data-caption="{{ g.caption | escape }}">
+          <img src="{{ g.src | relative_url }}" alt="{{ g.caption | escape }}" loading="lazy">
+        </a>
+        <figcaption>{{ g.caption }}</figcaption>
+      </figure>
+      {%- endif %}{% endfor %}
+    </div>
+  </section>
+  {%- endif %}
+
+  <nav class="pager" aria-label="More projects">
+    {%- assign prev_i = idx | minus: 1 -%}
+    {%- assign next_i = idx | plus: 1 -%}
+    <span>{% if prev_i >= 0 %}{% assign prevp = sorted[prev_i] %}<a href="{{ prevp.url | relative_url }}">← {{ prevp.title }}</a>{% endif %}</span>
+    <span>{% if next_i < sorted.size %}{% assign nextp = sorted[next_i] %}<a href="{{ nextp.url | relative_url }}">{{ nextp.title }} →</a>{% endif %}</span>
+  </nav>
+</article>

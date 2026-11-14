@@ -1,0 +1,25 @@
+---
+layout: default
+title: Contact
+description: Get in touch about data analyst, BI, and business analyst roles.
+---
+{%- assign profile = site.data.profile -%}
+
+<header class="page-head">
+  <h1>Contact</h1>
+  <p>
+    I'm looking for full-time data analyst, BI, and business analyst roles starting January 2027.
+    Email is the fastest way to reach me; I usually reply within a day.
+  </p>
+</header>
+
+<table class="table table--contact">
+  <tbody>
+    <tr><th scope="row">Email</th><td><a href="mailto:{{ profile.email }}">{{ profile.email }}</a> <button type="button" class="link-button" data-copy="{{ profile.email }}">Copy</button></td></tr>
+    <tr><th scope="row">LinkedIn</th><td><a href="{{ profile.linkedin }}" target="_blank" rel="noopener">linkedin.com/in/gurkeeratkakar</a></td></tr>
+    <tr><th scope="row">Phone</th><td><a href="tel:+18258880227">{{ profile.phone }}</a></td></tr>
+    <tr><th scope="row">GitHub</th><td><a href="{{ profile.github }}" target="_blank" rel="noopener">{{ profile.github | remove: "https://" }}</a></td></tr>
+    <tr><th scope="row">Résumé</th><td><a href="{{ profile.resume | relative_url }}" target="_blank" rel="noopener">PDF, updated {{ profile.resume_updated }}</a></td></tr>
+    <tr><th scope="row">Location</th><td>{{ profile.location }}</td></tr>
+  </tbody>
+</table>

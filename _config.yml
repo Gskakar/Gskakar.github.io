@@ -1,6 +1,25 @@
 title: Gurkeerat Singh Kakar
-description: Website portfolio of Gurkeerat Singh Kakar.
+description: Data science & analytics portfolio of Gurkeerat Singh Kakar - BI dashboards, data pipelines, and analysis projects.
+url: "https://gskakar.github.io"
+baseurl: ""
 theme: null
 markdown: kramdown
 permalink: pretty
 includes_dir: includes
+
+# Each file in _projects/ becomes its own page at /projects/<file-name>/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+exclude:
+  - HOW_TO_UPDATE.md
+  - README.md

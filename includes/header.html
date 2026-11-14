@@ -1,19 +1,15 @@
-{% assign current = page.url | default: '/' %}
-{% if current == '/index.html' %}
-  {% assign current = '/' %}
-{% endif %}
-{% assign nav_items = "Home:/|Projects:/projects/|Experience:/experience/|About:/about/|Contact:/contact/" | split: '|' %}
+{%- assign profile = site.data.profile -%}
 <header class="site-header">
-  <div class="site-header__inner container">
-    <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="site-nav" aria-label="Primary">
-      {% for item in nav_items %}
-        {% assign pair = item | split: ':' %}
-        {% assign label = pair[0] %}
-        {% assign url = pair[1] %}
-        {% assign is_active = current == url %}
-        <a class="site-nav__link{% if is_active %} is-active{% endif %}" href="{{ url | relative_url }}"{% if is_active %} aria-current="page"{% endif %}>{{ label }}</a>
-      {% endfor %}
+  <div class="wrap header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-name">{{ profile.name }}</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}aria-current="page"{% endif %}>Projects</a>
+      <a href="{{ '/dashboards/' | relative_url }}" {% if page.url contains '/dashboards' %}aria-current="page"{% endif %}>Dashboards</a>
+      <a href="{{ '/experience/' | relative_url }}" {% if page.url contains '/experience' %}aria-current="page"{% endif %}>Experience</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about' or page.url contains '/awards' %}aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}aria-current="page"{% endif %}>Contact</a>
+      <a class="nav-resume" href="{{ profile.resume | relative_url }}" target="_blank" rel="noopener">Résumé</a>
     </nav>
   </div>
 </header>

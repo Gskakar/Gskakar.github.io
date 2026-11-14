@@ -1,0 +1,62 @@
+---
+layout: default
+title: Home
+---
+{%- assign profile = site.data.profile -%}
+{%- assign featured = site.projects | where: "featured", true | sort: "order" -%}
+
+<section class="intro">
+  <div class="intro-text">
+    <p class="kicker">Data analyst · Edmonton, Alberta</p>
+    <h1>{{ profile.name }}</h1>
+    <p class="intro-lead">{{ profile.intro }}</p>
+    <p>
+      I'm currently a Dashboard Development Intern at the AI Centre for Decision Analytics and a Research
+      Assistant at the University of Alberta. I graduate in December 2026 and I'm looking for full-time
+      data and BI roles starting January 2027.
+    </p>
+    <p class="actions">
+      <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View projects</a>
+      <a class="btn" href="{{ profile.resume | relative_url }}" target="_blank" rel="noopener">Résumé (PDF)</a>
+      <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+    </p>
+  </div>
+  <img class="intro-photo" src="{{ profile.headshot | relative_url }}" alt="Portrait of {{ profile.name }}" width="320" height="400">
+</section>
+
+<section class="block">
+  <h2 class="block-title">Selected results</h2>
+  <dl class="figures">
+    {%- for s in profile.highlights %}
+    <div>
+      <dt>{{ s.value }}</dt>
+      <dd>{{ s.label }} <a href="{{ s.link | relative_url }}">See project</a></dd>
+    </div>
+    {%- endfor %}
+  </dl>
+</section>
+
+<section class="block">
+  <h2 class="block-title">Skills</h2>
+  <div class="skills">
+    {%- for g in profile.skills %}
+    <div>
+      <h3>{{ g.group }}</h3>
+      <p>{{ g.proof }}</p>
+      <p class="tools">{{ g.items | join: ", " }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="block">
+  <div class="block-head">
+    <h2 class="block-title">Selected projects</h2>
+    <a href="{{ '/projects/' | relative_url }}">All projects</a>
+  </div>
+  <ul class="project-list">
+    {%- for project in featured %}
+    {% include project-card.html project=project %}
+    {%- endfor %}
+  </ul>
+</section>

@@ -1,0 +1,6 @@
+{%- comment -%} One work-sample link. Links without a url are skipped. {%- endcomment -%}
+{%- assign lb = include.link -%}
+{%- if lb.url and lb.url != "" -%}
+  {%- if lb.url contains "://" -%}{%- assign lb_href = lb.url -%}{%- else -%}{%- assign lb_href = lb.url | relative_url -%}{%- endif -%}
+  <li><a href="{{ lb_href }}" target="_blank" rel="noopener">{{ lb.label }}</a> <span class="small">{{ lb.type | default: "link" | capitalize }}</span></li>
+{%- endif -%}

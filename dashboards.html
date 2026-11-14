@@ -1,0 +1,31 @@
+---
+layout: default
+title: Dashboards
+dashboards: true
+description: Interactive dashboards built from the data behind my projects.
+---
+{%- assign profile = site.data.profile -%}
+
+<header class="page-head">
+  <h1>Dashboards</h1>
+  <p>Four of my project workbooks, rebuilt to run in the browser on public or synthetic data.</p>
+</header>
+
+<div class="hub" data-hub>
+  <div class="tabs" role="tablist" aria-label="Choose a dashboard">
+    {%- for db in profile.dashboards %}
+    <button class="tab" type="button" role="tab" id="tab-{{ db.id }}" data-tab="{{ db.id }}"
+            aria-controls="panel-{{ db.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"{% unless forloop.first %} tabindex="-1"{% endunless %}>{{ db.title }}</button>
+    {%- endfor %}
+  </div>
+
+  {%- for db in profile.dashboards %}
+  {%- assign purl = "/projects/" | append: db.project | append: "/" -%}
+  {%- assign proj = site.projects | where: "url", purl | first -%}
+  {%- assign dsrc = "/assets/data/" | append: db.id | append: ".json" %}
+  <section class="hub-panel" role="tabpanel" id="panel-{{ db.id }}" aria-labelledby="tab-{{ db.id }}"{% unless forloop.first %} hidden{% endunless %}>
+    <p class="hub-note">{{ proj.takeaway }} <a href="{{ proj.url | relative_url }}">Read the project</a></p>
+    <div class="dash" data-dashboard="{{ db.id }}" data-src="{{ dsrc | relative_url }}"></div>
+  </section>
+  {%- endfor %}
+</div>

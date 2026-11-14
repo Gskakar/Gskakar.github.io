@@ -1,0 +1,48 @@
+---
+layout: default
+title: About
+description: From Delhi to Edmonton, how I got into data and what I do outside of it.
+---
+{%- assign profile = site.data.profile -%}
+
+<header class="page-head">
+  <h1>About</h1>
+</header>
+
+<div class="about">
+  <div class="prose">
+    <p>
+      I grew up in Delhi and moved to Edmonton in 2022 to study Computing Science at the University of Alberta.
+      Courses in statistics, data analysis, and databases got me interested in how data supports decisions,
+      and internships turned that into a job.
+    </p>
+    <p>
+      These days I rebuild university ranking methodologies for the Alberta School of Business and analyze
+      household survey data on energy access. I care about getting the numbers right: I check figures against
+      their source records before they go into a report.
+    </p>
+    <p>
+      Outside of work I play in an amateur football league and follow European football closely, especially
+      the tactics. I also sing and perform, read biographies, and cook when life gets busy.
+    </p>
+    <p>
+      I also spent a year as Vice President Internal of the International Students' Association, and received
+      the <a href="{{ '/awards/' | relative_url }}">UASU Global Connection Award</a> for that work.
+    </p>
+  </div>
+
+  <div class="about-photos">
+    <figure>
+      <a href="{{ '/assets/IMG_7685.jpg' | relative_url }}" data-lightbox data-caption="Performing">
+        <img src="{{ '/assets/IMG_7685.jpg' | relative_url }}" alt="Performing with a guitar" loading="lazy">
+      </a>
+      <figcaption>Performing</figcaption>
+    </figure>
+    <figure>
+      <a href="{{ '/assets/intramural_pic.jpeg' | relative_url }}" data-lightbox data-caption="Intramural football team">
+        <img src="{{ '/assets/intramural_pic.jpeg' | relative_url }}" alt="Intramural football team photo" loading="lazy">
+      </a>
+      <figcaption>Intramural football</figcaption>
+    </figure>
+  </div>
+</div>

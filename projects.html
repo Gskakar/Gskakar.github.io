@@ -1,0 +1,32 @@
+---
+layout: default
+title: Projects
+description: Work and course projects in data analysis, BI dashboards, and software.
+---
+{%- assign projects = site.projects | sort: "order" -%}
+{%- assign work = projects | where: "kind", "work" -%}
+
+<header class="page-head">
+  <h1>Projects</h1>
+  <p>Work and course projects. Four of them include an interactive dashboard you can try in the browser.</p>
+</header>
+
+<section class="block block--first">
+  <h2 class="block-title">Work</h2>
+  <ul class="project-list">
+    {%- for project in work %}
+    {% include project-card.html project=project %}
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="block">
+  <h2 class="block-title">Coursework and other projects</h2>
+  <ul class="project-list">
+    {%- for project in projects %}
+    {%- unless project.kind == "work" %}
+    {% include project-card.html project=project %}
+    {%- endunless %}
+    {%- endfor %}
+  </ul>
+</section>

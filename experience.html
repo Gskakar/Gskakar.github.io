@@ -1,0 +1,45 @@
+---
+layout: default
+title: Experience
+description: Data analytics, BI, and research roles, plus leadership experience.
+---
+{%- assign profile = site.data.profile -%}
+{%- assign work = site.data.experience | where: "type", "work" -%}
+{%- assign leadership = site.data.experience | where: "type", "leadership" -%}
+{%- assign uni = profile.education | first -%}
+
+<header class="page-head">
+  <h1>Experience</h1>
+  <p>Analytics, BI, and research roles since 2025. The full history is in my <a href="{{ profile.resume | relative_url }}" target="_blank" rel="noopener">résumé</a>.</p>
+</header>
+
+<section class="block block--first">
+  <h2 class="block-title">Data and analytics</h2>
+  {%- for job in work %}
+  {% include role.html job=job %}
+  {%- endfor %}
+</section>
+
+<section class="block">
+  <h2 class="block-title">Leadership</h2>
+  {%- for job in leadership %}
+  {% include role.html job=job %}
+  {%- endfor %}
+</section>
+
+<section class="block">
+  <h2 class="block-title">Education</h2>
+  <div class="role">
+    <div class="role-head">
+      <h3>{{ uni.degree }}</h3>
+      <span class="meta">{{ uni.period }}</span>
+    </div>
+    <p class="role-org">{{ uni.school }} · {{ uni.detail }}</p>
+    <p class="tools">
+      Relevant courses:
+      {% for c in profile.coursework -%}
+        {%- if c.project %}{% assign curl = "/projects/" | append: c.project | append: "/" %}<a href="{{ curl | relative_url }}">{{ c.code }} {{ c.name }}</a>{% else %}{{ c.code }} {{ c.name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+      {%- endfor %}
+    </p>
+  </div>
+</section>

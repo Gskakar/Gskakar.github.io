@@ -1,0 +1,96 @@
+# Site-wide personal details. Edit here once and every page updates.
+# Writing rule: one idea per line, numbers first, max 3 bullets.
+
+name: Gurkeerat Singh Kakar
+headline: Data Analytics · Business Intelligence
+intro: I build data pipelines, models, and dashboards for university leadership and research teams, mostly in Python, SQL, Power BI, and Tableau.
+location: Edmonton, Alberta
+email: gurkeeratkakar@gmail.com
+phone: "+1 (825) 888-0227"
+linkedin: https://www.linkedin.com/in/gurkeeratkakar
+github: https://github.com/Gskakar
+headshot: /assets/IMG_7876.JPG
+
+resume: /assets/Gurkeerat_Kakar_Resume.pdf
+resume_updated: November 2026
+
+availability: Graduating Dec 2026 · Available full-time from January 2027
+
+education:
+  - degree: B.Sc. Computing Science (Specialization)
+    school: University of Alberta
+    period: 2022 – Dec 2026
+    detail: Certificate in Applied Data Science · GPA 3.3+
+  - degree: High School Diploma
+    school: Delhi Public School Noida
+    period: 2022
+    detail: Scholarship in Engineering Sciences
+
+# "Selected results" on the home page. Keep labels to one short line.
+highlights:
+  - value: "Exact"
+    label: Match to ShanghaiRanking's published scores with my rebuilt pipeline.
+    link: /projects/shanghairanking-benchmark/
+  - value: "~20%"
+    label: Increase in user interaction, supported by my Power BI reporting.
+    link: /projects/skillup-engagement-dashboard/
+  - value: "24.6K"
+    label: Survey records cleaned and harmonized across 5 waves.
+    link: /projects/energy-trilemma-workbook/
+  - value: "3.48M"
+    label: Transactions audited for fraud and fairness.
+    link: /projects/fraud-detection-responsible-ai/
+
+# Skills: three groups shown on the home page, each with one line of proof.
+skills:
+  - group: Analysis & modelling
+    proof: Rebuilt a global ranking formula and modelled what-if growth targets.
+    link: /projects/shanghairanking-benchmark/
+    items: [Python, Pandas & NumPy, R / RStudio, Regression & panel data, Hypothesis testing, What-if modelling, Fairness audits]
+  - group: BI & visualization
+    proof: Built Power BI and Tableau dashboards for managers and researchers.
+    link: /projects/energy-trilemma-workbook/
+    items: [Power BI & DAX, Tableau, "Excel (XLOOKUP, Pivot Tables)", KPI design, Matplotlib & Plotly, Data storytelling]
+  - group: Data engineering & quality
+    proof: Automated reporting and validated every figure against source records.
+    link: /projects/skillup-engagement-dashboard/
+    items: [SQL & MySQL, ETL & data cleaning, Web scraping (Selenium), Fuzzy matching, MongoDB & SQLite, Git & GitHub, SharePoint & M365]
+
+# Interactive dashboards (data built by _scripts/build_dashboard_data.py).
+# "project" is the file name in _projects/ that hosts the dashboard.
+dashboards:
+  - id: gras-2025
+    project: shanghairanking-benchmark
+    title: GRAS 2025 benchmark
+  - id: ft-mba
+    project: ft-mba-ranking-analysis
+    title: FT MBA ranking, 1999–2026
+  - id: energy-trilemma
+    project: energy-trilemma-workbook
+    title: Energy trilemma explorer
+  - id: fraud
+    project: fraud-detection-responsible-ai
+    title: Fraud & fairness audit
+
+# Relevant courses (shown as one compact row). "project" links a course to its case study.
+coursework:
+  - code: INT D 491
+    name: Applied data science
+    project: fraud-detection-responsible-ai
+  - code: BUEC 420
+    name: Econometrics & data analysis
+    project: air-pollution-life-expectancy
+  - code: CMPUT 466
+    name: Machine learning
+  - code: CMPUT 195
+    name: Data science foundations
+  - code: CMPUT 291
+    name: Database management
+    project: social-media-database
+  - code: CMPUT 301
+    name: Software engineering
+    project: luckyspot-event-app
+  - code: CMPUT 404
+    name: Web applications
+  - code: CMPUT 365
+    name: Reinforcement learning

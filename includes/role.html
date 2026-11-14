@@ -1,0 +1,31 @@
+{%- assign job = include.job -%}
+<article class="role" id="{{ job.org | slugify }}">
+  <div class="role-head">
+    <h3>{{ job.role }}</h3>
+    <span class="meta">{{ job.start }}{% if job.end != "" %} – {{ job.end }}{% endif %}</span>
+  </div>
+  <p class="role-org">{{ job.org }} · {{ job.location }}</p>
+  <p>{{ job.summary }}</p>
+  {%- if job.highlights and job.highlights.size > 0 %}
+  <ul>
+    {%- for h in job.highlights %}
+    <li>{{ h | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  {%- if job.skills and job.skills.size > 0 %}
+  <p class="tools">Skills: {{ job.skills | join: ", " }}</p>
+  {%- endif %}
+  {%- assign has_refs = false -%}
+  {%- if job.projects.size > 0 or job.links.size > 0 %}{% assign has_refs = true %}{% endif -%}
+  {%- if has_refs %}
+  <p class="role-links">
+    {%- for slug in job.projects %}
+      {%- assign purl = "/projects/" | append: slug | append: "/" -%}
+      {%- assign rp = site.projects | where: "url", purl | first -%}
+      {%- if rp %}<a href="{{ rp.url | relative_url }}">{{ rp.title | split: " for " | first }}</a>{% endif %}
+    {%- endfor %}
+    {%- for l in job.links %}{% if l.url and l.url != "" %}<a href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endif %}{% endfor %}
+  </p>
+  {%- endif %}
+</article>

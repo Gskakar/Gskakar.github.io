@@ -1,0 +1,97 @@
+# Experience timeline, newest first.
+#
+# type:       work | leadership   (filter tabs on the Experience page)
+# summary:    one line, what the role is about
+# highlights: the first 2 show by default; any more sit behind "More details". Keep each under ~18 words.
+# skills:     tools and skills used (shown as tags)
+# projects:   file names (without .md) from _projects/ to link as case studies
+# links:      reference letters etc.
+
+- role: Dashboard Development Intern
+  org: AI Centre for Decision Analytics (AI4DA)
+  type: work
+  start: Apr 2026
+  end: Present
+  location: Edmonton, AB
+  summary: Benchmarking the Alberta School of Business in the ShanghaiRanking and FT global rankings.
+  highlights:
+    - "Built a Python pipeline that **reproduced ShanghaiRanking's published scores exactly**."
+    - "Modelled **what-if growth targets** and presented them to School of Business leadership."
+    - "Scraped rankings and **matched Web of Science papers** to researchers and faculties."
+    - "Recomputed **FT MBA indicators** in Excel (XLOOKUP, Pivot Tables) against Canadian peers."
+  skills: [Python, Pandas, Web scraping, What-if modelling, Excel, Plotly, GitHub]
+  metrics:
+    - value: "Exact"
+      label: score match
+    - value: "2"
+      label: rankings rebuilt
+  projects: [shanghairanking-benchmark, ft-mba-ranking-analysis]
+  links: []
+
+- role: Research Assistant
+  org: University of Alberta · Dr. Ikechukwu (Ike) Nwaka
+  type: work
+  start: Sep 2025
+  end: Present
+  location: Edmonton, AB
+  summary: Energy-equity and digital-access research on large household survey data.
+  highlights:
+    - "Cleaned and harmonized **24.6K household records** across 5 survey waves in RStudio and Python."
+    - "Built **Tableau dashboards** that show senior researchers trends and anomalies at a glance."
+    - "Kept documentation current for a **global research team**; supported Canvas LMS and exams."
+  skills: [RStudio, Python, Tableau, Power BI, Data documentation]
+  metrics:
+    - value: "24.6K"
+      label: records harmonized
+  projects: [energy-trilemma-workbook]
+  links: []
+
+- role: Data / Business Analyst Intern
+  org: Skill-Up Technologies
+  type: work
+  start: Feb 2025
+  end: Jul 2025
+  location: Bellevue, WA (Remote)
+  summary: KPI design and automated Power BI reporting for an ed-tech platform.
+  highlights:
+    - "Automated **MySQL → Power BI** reporting with a DAX data model; no more manual prep."
+    - "Engagement insights supported a **~20% increase in user interaction**."
+    - "Defined retention KPIs and **validated figures against SharePoint** records."
+  skills: [Power BI, DAX, MySQL, SQL, KPI design, SharePoint]
+  metrics:
+    - value: "~20%"
+      label: more interaction
+  projects: [skillup-engagement-dashboard]
+  links:
+    - label: Reference letter
+      url: /assets/lor_skillup.pdf
+
+- role: Vice President Internal
+  org: UAlberta International Students' Association
+  type: leadership
+  start: May 2024
+  end: May 2025
+  location: Edmonton, AB
+  summary: Led operations and programming for 9,000+ international students.
+  highlights:
+    - "Revived the **I-Card discount program** and restructured internal teams."
+    - "Received the **UASU Global Connection Award**."
+  skills: [Leadership, Stakeholder management, Event operations]
+  metrics: []
+  projects: []
+  links:
+    - label: Reference letter
+      url: /assets/lor_isa.pdf
+
+- role: Public Relations Associate
+  org: Network of Applied Technology (NAT)
+  type: leadership
+  start: Jan 2025
+  end: Oct 2025
+  location: Edmonton, AB
+  summary: Outreach and briefing materials for policymakers and media partners.
+  highlights: []
+  skills: [Communications, Stakeholder engagement]
+  metrics: []
+  projects: []
+  links: []
