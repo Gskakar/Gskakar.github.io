@@ -11,7 +11,23 @@ description: Work and course projects in data analysis, BI dashboards, and softw
   <p>Work and course projects. Four of them include an interactive dashboard you can try in the browser.</p>
 </header>
 
-<section class="block block--first">
+{%- comment -%} Skill filter: shown by main.js; each button lists the tool names it matches, separated by commas. {%- endcomment -%}
+<div class="skill-filter" data-skill-filter hidden>
+  <span class="skill-filter-label" id="skill-filter-label">Show projects using</span>
+  <div class="skill-filter-options" role="group" aria-labelledby="skill-filter-label">
+    <button type="button" aria-pressed="true" data-match="">Any skill</button>
+    <button type="button" aria-pressed="false" data-match="python">Python</button>
+    <button type="button" aria-pressed="false" data-match="sql">SQL</button>
+    <button type="button" aria-pressed="false" data-match="excel">Excel</button>
+    <button type="button" aria-pressed="false" data-match="tableau">Tableau</button>
+    <button type="button" aria-pressed="false" data-match="power bi,dax">Power BI</button>
+    <button type="button" aria-pressed="false" data-match="rstudio,regression,econometrics">R &amp; statistics</button>
+    <button type="button" aria-pressed="false" data-match="xgboost,scikit,machine learning">Machine learning</button>
+  </div>
+  <p class="skill-filter-count" aria-live="polite"></p>
+</div>
+
+<section class="block block--first" data-project-group>
   <h2 class="block-title">Work</h2>
   <ul class="project-list">
     {%- for project in work %}
@@ -20,7 +36,7 @@ description: Work and course projects in data analysis, BI dashboards, and softw
   </ul>
 </section>
 
-<section class="block">
+<section class="block" data-project-group>
   <h2 class="block-title">Coursework and other projects</h2>
   <ul class="project-list">
     {%- for project in projects %}

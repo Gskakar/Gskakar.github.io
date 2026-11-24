@@ -93,7 +93,7 @@
 
   function card(grid, title, sub, opts) {
     opts = opts || {};
-    var canvas = el("canvas", { role: "img", "aria-label": title });
+    var canvas = el("canvas", { role: "img", "aria-label": title || sub || "Chart" });
     var body = opts.html ? el("div", { class: "dash-html" }) : el("div", { class: "dash-canvas", style: "height:" + (opts.height || 300) + "px" }, [canvas]);
     var c = el("div", { class: "dash-card" + (opts.wide ? " dash-card--wide" : "") }, [
       el("div", { class: "dash-card-head" }, [el("h3", { text: title }), sub ? el("p", { text: sub }) : null]),
@@ -439,7 +439,7 @@
      ===================================================================== */
   function energyDashboard(root, d) {
     var ui = shell(root, {
-      title: "Energy Trilemma Explorer: Nigeria, 2010–2022",
+      title: "Energy and Internet Access: Nigeria, 2010–2022",
       desc: "Pick an indicator, then compare six zones, urban vs rural, across five waves.",
       source: d.source
     });
@@ -459,7 +459,7 @@
     var pillars = [];
     d.indicators.forEach(function (i) { if (pillars.indexOf(i.pillar) === -1) pillars.push(i.pillar); });
     select(ui.controls, "Indicator", pillars.map(function (p) {
-      return { group: "Energy " + p.toLowerCase(), options: d.indicators.filter(function (i) { return i.pillar === p; }).map(function (i) { return { value: i.key, label: i.label }; }) };
+      return { group: p === "Digital" ? "Digital access" : "Energy access", options: d.indicators.filter(function (i) { return i.pillar === p; }).map(function (i) { return { value: i.key, label: i.label }; }) };
     }), state.ind, function (v) { state.ind = v; update(); });
     segmented(ui.controls, "Area", [{ value: "All", label: "All" }, { value: "Urban", label: "Urban" }, { value: "Rural", label: "Rural" }], state.sector, function (v) { state.sector = v; update(); });
     segmented(ui.controls, "Survey year", years.map(function (y) { return { value: y, label: String(y) }; }), state.year, function (v) { state.year = v; update(); });
@@ -482,9 +482,9 @@
         plugins: { legend: { position: "bottom" }, tooltip: { callbacks: { label: function (it) { return " " + it.dataset.label + ": " + fmt(it.parsed.x); } } } }
       }
     });
-    var c3 = card(ui.grid, "", "Every percentage indicator at a glance.", { height: 320 });
+    var c3 = card(ui.grid, "", "All share-of-households indicators at a glance.", { height: 320 });
     var pctInds = d.indicators.filter(function (i) { return i.kind !== "num"; });
-    var pillarColor = { Security: C.sky, Equity: C.amber, Sustainability: C.green, Digital: C.violet };
+    var pillarColor = { Security: C.blue, Digital: C.teal };
     var chart3 = new Chart(c3.canvas, {
       type: "bar",
       data: { labels: pctInds.map(function (i) { return i.label; }), datasets: [{ data: [], borderRadius: 2, backgroundColor: pctInds.map(function (i) { return pillarColor[i.pillar]; }) }] },
@@ -499,7 +499,8 @@
       var info = indByKey[state.ind];
       c1.head.querySelector("h3").textContent = info.label + " over time" + (state.sector !== "All" ? " (" + state.sector.toLowerCase() + ")" : "");
       c2.head.querySelector("h3").textContent = info.label + " by zone, " + state.year;
-      c3.head.querySelector("h3").textContent = "Trilemma snapshot, " + state.year + (state.sector !== "All" ? " (" + state.sector.toLowerCase() + ")" : "");
+      c3.head.querySelector("h3").textContent = "Snapshot, " + state.year + (state.sector !== "All" ? " (" + state.sector.toLowerCase() + ")" : "");
+      [c1, c2, c3].forEach(function (c) { c.canvas.setAttribute("aria-label", c.head.querySelector("h3").textContent); });
 
       chart1.data.datasets = [{
         label: "Nigeria", data: years.map(function (y) { return cell(y, "All", state.sector)[state.ind]; }),

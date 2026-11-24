@@ -1,58 +1,42 @@
 ---
-title: Energy Trilemma Insights Workbook
-tagline: Energy and digital access across Nigeria, from 5 survey waves.
-takeaway: Internet access rose from 4% to 28% (2010–2022) while electricity stayed near 50%; rural north lags most.
+title: Energy and Internet Access in Nigeria
+tagline: Who has electricity and internet, across 12 years of household surveys.
+takeaway: Internet access rose from 4% to 28% of households (2010–2022) while electricity stayed near 50%. Rural homes in the north lag most.
 order: 3
 featured: true
 kind: work
 category: BI & Dashboards
-context: University of Alberta · Research
+context: University of Alberta · SSHRC-funded research
 role: Research Assistant
-period: Sep 2025 – Present
-tools: [Tableau, Power BI, RStudio, Python, Excel]
+team: Research team led by Dr. Ikechukwu (Ike) Nwaka
+period: Sep 2025 – Dec 2026
+tools: [RStudio, Python, Pandas, Tableau, Excel]
 dashboard: energy-trilemma
 metrics:
   - value: "24.6K"
-    label: records harmonized
+    label: household records harmonized
   - value: "5"
-    label: survey waves
+    label: survey waves, 2010–2022
   - value: "6"
-    label: zones compared
-links:
-  - label: BI Dashboards
-    type: dashboard
-    url: https://drive.google.com/file/d/1C7gtaaUUTodnoA6WLkX0R4sZaGdJ8Knx/view?usp=drive_link
-  - label: Early BI Report
-    type: report
-    url: https://drive.google.com/file/d/1XbvDQsKE_0DXvgb5iif0weuOB_S4E6oF/view?usp=sharing
-  - label: Insights Presentation
-    type: slides
-    url: https://docs.google.com/presentation/d/1CqKy8ySoBOFIp5DyBED6HnjI8HE67OXB/edit?usp=sharing&ouid=117105990485077395410&rtpof=true&sd=true
-gallery:
-  - src: /assets/projects/energy-trilemma-workbook/overview.png
-    caption: Overview
-  - src: /assets/projects/energy-trilemma-workbook/security.png
-    caption: Energy security
-  - src: /assets/projects/energy-trilemma-workbook/equity.png
-    caption: Energy equity
-  - src: /assets/projects/energy-trilemma-workbook/sustainability.png
-    caption: Sustainability
-  - src: /assets/projects/energy-trilemma-workbook/digital.png
-    caption: Digital access
-note: ""
+    label: geopolitical zones compared
+links: []
+note: Figures on this page are unweighted shares of surveyed households from my harmonized extract. The research team's published estimates use survey weights and may differ slightly.
 ---
 
 ## Problem
 
-A global research team needed one consistent view of energy security, equity, and sustainability across
-regions, urban and rural areas, and twelve years of household surveys.
+The research asks who in Nigeria still lacks adequate energy and internet access, and how to reach them.
+Answering that needs one consistent household dataset across five survey waves collected with different
+questionnaires.
 
 ## What I did
 
-- **Cleaned and harmonized** five survey waves in RStudio and Python into one Tableau-ready extract.
-- **Designed dashboards** in Tableau and Power BI, prototyped first in Python.
-- **Documented** every variable so the team works from the same definitions.
+- **Harmonized five waves** of the Nigeria General Household Survey-Panel in RStudio and Python: consistent zone, state, and LGA labels, capped outliers, one row per household per wave.
+- **Built the descriptive layer**: electricity access, supply hours, outages, generator use, phones, internet, and 4G coverage by zone, urban or rural area, and year.
+- **Designed Tableau dashboards** for senior researchers, with a data dictionary so the global team works from the same definitions.
 
-## Result
+## What the data shows
 
-Senior researchers can spot regional gaps and anomalies at a glance.
+- **Internet access rose about sevenfold**, from 4% to 28% of households. Phones reached nearly 9 in 10 homes.
+- **Electricity stayed near 50%** nationally. In 2022, 81% of urban households had it, against 38% of rural ones.
+- **The rural north is furthest behind**: only 20% of rural households in the North East and 23% in the North West had electricity in 2022.

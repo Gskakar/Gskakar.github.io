@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<title>Relational schema: users, follows, tweets, retweets, hashtag_mentions, lists, include</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#646a71"/></marker></defs>
+<rect width="880" height="500" fill="#ffffff"/>
+<line x1="135" y1="114" x2="135" y2="150" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="360" y1="190" x2="230" y2="219" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M550,259.0 h24 v-110 h-24" fill="none" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="660" y1="89" x2="550" y2="190" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="660" y1="89" x2="230" y2="219" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="660" y1="306" x2="550" y2="190" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="135" y1="370" x2="135" y2="288" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="360" y1="427" x2="230" y2="406" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<line x1="455" y1="380" x2="455" y2="270" stroke="#646a71" stroke-width="1.3" marker-end="url(#arr)"/>
+<rect x="40" y="150" width="190" height="138" rx="4" fill="#faf9f6" stroke="#1f2328" stroke-width="1.2"/>
+<rect x="40" y="150" width="190" height="28" rx="4" fill="#1f2328"/>
+<text x="50" y="169" fill="#ffffff" font-weight="600">users</text>
+<text x="50" y="194" fill="#1f2328" text-decoration="underline">usr</text>
+<text x="50" y="216" fill="#1f2328">name</text>
+<text x="50" y="238" fill="#1f2328">email</text>
+<text x="50" y="260" fill="#1f2328">phone</text>
+<text x="50" y="282" fill="#1f2328">pwd</text>
+<rect x="40" y="20" width="190" height="94" rx="4" fill="#faf9f6" stroke="#1f2328" stroke-width="1.2"/>
+<rect x="40" y="20" width="190" height="28" rx="4" fill="#1f2328"/>
+<text x="50" y="39" fill="#ffffff" font-weight="600">follows</text>
+<text x="50" y="64" fill="#1f2328" text-decoration="underline">flwer</text>
+<text x="220" y="64" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="50" y="86" fill="#1f2328" text-decoration="underline">flwee</text>
+<text x="220" y="86" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="50" y="108" fill="#1f2328">start_date</text>
+<rect x="360" y="110" width="190" height="160" rx="4" fill="#faf9f6" stroke="#1f2328" stroke-width="1.2"/>
+<rect x="360" y="110" width="190" height="28" rx="4" fill="#1f2328"/>
+<text x="370" y="129" fill="#ffffff" font-weight="600">tweets</text>
+<text x="370" y="154" fill="#1f2328" text-decoration="underline">tid</text>
+<text x="370" y="176" fill="#1f2328">writer_id</text>
+<text x="540" y="176" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="370" y="198" fill="#1f2328">text</text>
+<text x="370" y="220" fill="#1f2328">tdate</text>
+<text x="370" y="242" fill="#1f2328">ttime</text>
+<text x="370" y="264" fill="#1f2328">replyto_tid</text>
+<text x="540" y="264" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<rect x="660" y="20" width="190" height="138" rx="4" fill="#faf9f6" stroke="#1f2328" stroke-width="1.2"/>
+<rect x="660" y="20" width="190" height="28" rx="4" fill="#1f2328"/>
+<text x="670" y="39" fill="#ffffff" font-weight="600">retweets</text>
+<text x="670" y="64" fill="#1f2328" text-decoration="underline">tid</text>
+<text x="840" y="64" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="670" y="86" fill="#1f2328" text-decoration="underline">retweeter_id</text>
+<text x="840" y="86" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="670" y="108" fill="#1f2328">writer_id</text>
+<text x="840" y="108" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="670" y="130" fill="#1f2328">spam</text>
+<text x="670" y="152" fill="#1f2328">rdate</text>
+<rect x="660" y="270" width="190" height="72" rx="4" fill="#faf9f6" stroke="#1f2328" stroke-width="1.2"/>
+<rect x="660" y="270" width="190" height="28" rx="4" fill="#1f2328"/>
+<text x="670" y="289" fill="#ffffff" font-weight="600">hashtag_mentions</text>
+<text x="670" y="314" fill="#1f2328" text-decoration="underline">tid</text>
+<text x="840" y="314" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="670" y="336" fill="#1f2328" text-decoration="underline">term</text>
+<rect x="40" y="370" width="190" height="72" rx="4" fill="#faf9f6" stroke="#1f2328" stroke-width="1.2"/>
+<rect x="40" y="370" width="190" height="28" rx="4" fill="#1f2328"/>
+<text x="50" y="389" fill="#ffffff" font-weight="600">lists</text>
+<text x="50" y="414" fill="#1f2328" text-decoration="underline">owner_id</text>
+<text x="220" y="414" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="50" y="436" fill="#1f2328" text-decoration="underline">lname</text>
+<rect x="360" y="380" width="190" height="94" rx="4" fill="#faf9f6" stroke="#1f2328" stroke-width="1.2"/>
+<rect x="360" y="380" width="190" height="28" rx="4" fill="#1f2328"/>
+<text x="370" y="399" fill="#ffffff" font-weight="600">include</text>
+<text x="370" y="424" fill="#1f2328" text-decoration="underline">owner_id</text>
+<text x="540" y="424" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="370" y="446" fill="#1f2328" text-decoration="underline">lname</text>
+<text x="540" y="446" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+<text x="370" y="468" fill="#1f2328" text-decoration="underline">tid</text>
+<text x="540" y="468" fill="#1d5c55" text-anchor="end" font-size="11">FK</text>
+</svg>

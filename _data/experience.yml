@@ -11,9 +11,9 @@
   org: AI Centre for Decision Analytics (AI4DA)
   type: work
   start: Apr 2026
-  end: Present
+  end: Dec 2026
   location: Edmonton, AB
-  summary: Benchmarking the Alberta School of Business in the ShanghaiRanking and FT global rankings.
+  summary: Benchmarked the Alberta School of Business in the ShanghaiRanking and FT global rankings. Wrapping up by December.
   highlights:
     - "Built a Python pipeline that **reproduced ShanghaiRanking's published scores exactly**."
     - "Modelled **what-if growth targets** and presented them to School of Business leadership."
@@ -24,7 +24,7 @@
     - value: "Exact"
       label: score match
     - value: "2"
-      label: rankings rebuilt
+      label: global rankings analyzed
   projects: [shanghairanking-benchmark, ft-mba-ranking-analysis]
   links: []
 
@@ -32,9 +32,9 @@
   org: University of Alberta · Dr. Ikechukwu (Ike) Nwaka
   type: work
   start: Sep 2025
-  end: Present
+  end: Dec 2026
   location: Edmonton, AB
-  summary: Energy-equity and digital-access research on large household survey data.
+  summary: Energy and internet-access research on large household survey data. Finishing in December.
   highlights:
     - "Cleaned and harmonized **24.6K household records** across 5 survey waves in RStudio and Python."
     - "Built **Tableau dashboards** that show senior researchers trends and anomalies at a glance."

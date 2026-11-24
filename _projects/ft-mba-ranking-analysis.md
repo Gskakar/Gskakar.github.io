@@ -17,15 +17,16 @@ metrics:
   - value: "21"
     label: criteria mapped
   - value: "10"
-    label: Canadian peers tracked
-links:
-  - label: Methodology breakdown
-    type: report
-    url: ""
-  - label: Leadership presentation
-    type: slides
-    url: ""
-note: The dashboard uses the FT's public tables only. ASB's survey submissions stay private.
+    label: Canadian schools tracked
+links: []
+gallery:
+  - src: /assets/projects/ft-mba-ranking-analysis/canadian-rankings.png
+    caption: FT rank history for ASB and nine Canadian peers, with methodology breaks marked
+  - src: /assets/projects/ft-mba-ranking-analysis/schools-by-region.png
+    caption: Number of schools in the FT top 100 by region (each panel has its own scale)
+  - src: /assets/projects/ft-mba-ranking-analysis/top4-rank-by-region.png
+    caption: Average rank of each region's best four schools (lower is better; own scale per panel)
+note: Charts and dashboard use the FT's public ranking tables only. ASB's own survey submissions and faculty data stay private.
 ---
 
 ## Problem

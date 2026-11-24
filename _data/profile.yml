@@ -27,18 +27,30 @@ education:
     detail: Scholarship in Engineering Sciences
 
 # "Selected results" on the home page. Keep labels to one short line.
+# count/prefix/suffix/decimals drive the count-up animation; "value" is what shows without JavaScript.
 highlights:
-  - value: "Exact"
-    label: Match to ShanghaiRanking's published scores with my rebuilt pipeline.
-    link: /projects/shanghairanking-benchmark/
   - value: "~20%"
-    label: Increase in user interaction, supported by my Power BI reporting.
+    count: 20
+    prefix: "~"
+    suffix: "%"
+    label: More user interaction, supported by the KPI reporting I automated in Power BI.
     link: /projects/skillup-engagement-dashboard/
   - value: "24.6K"
-    label: Survey records cleaned and harmonized across 5 waves.
+    count: 24.6
+    decimals: 1
+    suffix: "K"
+    label: Household survey records cleaned and harmonized across five waves, 2010–2022.
     link: /projects/energy-trilemma-workbook/
-  - value: "3.48M"
-    label: Transactions audited for fraud and fairness.
+  - value: "28 years"
+    count: 28
+    suffix: " years"
+    label: Of FT MBA rankings (2,727 records) modelled for business-school leadership.
+    link: /projects/ft-mba-ranking-analysis/
+  - value: "3.5M"
+    count: 3.5
+    decimals: 1
+    suffix: "M"
+    label: Card transactions cleaned, de-identified, and audited for bias.
     link: /projects/fraud-detection-responsible-ai/
 
 # Skills: three groups shown on the home page, each with one line of proof.
@@ -67,7 +79,7 @@ dashboards:
     title: FT MBA ranking, 1999–2026
   - id: energy-trilemma
     project: energy-trilemma-workbook
-    title: Energy trilemma explorer
+    title: Energy and internet access
   - id: fraud
     project: fraud-detection-responsible-ai
     title: Fraud & fairness audit

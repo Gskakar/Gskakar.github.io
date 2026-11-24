@@ -8,7 +8,7 @@ kind: work
 category: Data Science & Analytics
 context: AI4DA · Internship
 role: Dashboard Development Intern
-period: Apr 2026 – Present
+period: Apr 2026 – Dec 2026
 tools: [Python, Pandas, Selenium, Fuzzy matching, Plotly, Excel, GitHub]
 dashboard: gras-2025
 metrics:
@@ -17,15 +17,12 @@ metrics:
   - value: "3"
     label: subjects modelled
   - value: "5"
-    label: indicators reverse-engineered
-links:
-  - label: Methodology write-up
-    type: report
-    url: ""
-  - label: Leadership presentation
-    type: slides
-    url: ""
-note: The dashboard uses public 2025 tables only. Internal faculty data stays private.
+    label: indicators rebuilt from raw data
+links: []
+gallery:
+  - src: /assets/projects/shanghairanking-benchmark/paper-value-what-if.png
+    caption: "What-if: the value of one Q1-journal paper relative to one TOP-journal paper, by subject"
+note: The dashboard uses ShanghaiRanking's public 2025 tables. Internal researcher and faculty data stays private.
 ---
 
 ## Problem

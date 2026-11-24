@@ -26,6 +26,14 @@ OUT = Path("assets/data")
 OUT.mkdir(parents=True, exist_ok=True)
 
 
+def ft_file(name):
+    """FT workbooks live in 'FT50 Rankings/Excel Worksheets' (older copies sat one folder up)."""
+    for folder in ("FT50 Rankings/Excel Worksheets", "FT50 Rankings"):
+        if (SRC / folder / name).exists():
+            return SRC / folder / name
+    raise FileNotFoundError(name)
+
+
 def save(name, obj):
     path = OUT / name
     path.write_text(json.dumps(obj, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
@@ -54,13 +62,13 @@ def build_ft():
         "Haskayne School of Business, University of Calgary": "Haskayne (Calgary)",
         "McMaster University: DeGroote": "DeGroote (McMaster)",
     }
-    wb = openpyxl.load_workbook(SRC / "FT50 Rankings/FT50 Analysis.xlsx", data_only=True, read_only=True)
+    wb = openpyxl.load_workbook(ft_file("FT50 Analysis.xlsx"), data_only=True, read_only=True)
     canada = {}
     for year, rank, uni in list(wb["Canadian Rankings"].iter_rows(values_only=True))[1:]:
         if uni and isinstance(year, int) and num(rank) is not None:
             canada.setdefault(short.get(uni, uni), {})[year] = int(rank)
 
-    wc = openpyxl.load_workbook(SRC / "FT50 Rankings/FT50 Rankings Charts.xlsx", data_only=True, read_only=True)
+    wc = openpyxl.load_workbook(ft_file("FT50 Rankings Charts.xlsx"), data_only=True, read_only=True)
 
     def year_table(sheet, header_row_label="Year"):
         rows = list(wc[sheet].iter_rows(values_only=True))
@@ -134,10 +142,9 @@ def build_energy():
         "Daily Electricity Hours": ("Daily hours of supply", "num", "Security"),
         "Outages Per Week": ("Outages per week", "num", "Security"),
         "Uses Generator": ("Uses a generator", "pct", "Security"),
-        "Energy Poor (MPI)": ("Energy poor (multidimensional)", "pct", "Equity"),
-        "Energy Burden (Expenditure)": ("Energy share of spending (median)", "pctmed", "Equity"),
-        "Clean Cooking Fuel": ("Clean cooking fuel", "pct", "Sustainability"),
-        "Appliance Count": ("Appliances owned", "num", "Equity"),
+        # Energy-poverty, energy-burden and clean-cooking measures are left out on purpose: the research
+        # team has since revised those definitions (Alkire-Foster index, WHO cooking definition).
+        "Appliance Count": ("Appliances owned", "num", "Security"),
         "Mobile Phone": ("Owns a mobile phone", "pct", "Digital"),
         "Internet Access": ("Internet access", "pct", "Digital"),
         "4G Available": ("4G network available", "pct", "Digital"),
@@ -223,8 +230,50 @@ def build_fraud():
     })
 
 
+# ---------------------------------------------------------------- Home-page chart (static SVG)
+def build_hero_chart():
+    """Writes includes/hero-chart.html from the energy data: national averages, three indicators."""
+    e = json.loads((OUT / "energy-trilemma.json").read_text(encoding="utf-8"))
+    years = e["years"]
+    series = [  # (column, label, colour, emphasis)
+        ("Mobile Phone", "Mobile phone", "#76b7b2", False),
+        ("Has Electricity", "Electricity", "#4e79a7", False),
+        ("Internet Access", "Internet", "#e15759", True),
+    ]
+    W, H, L, R, T, B, YMAX = 560, 300, 38, 372, 14, 262, 100
+    x = lambda yr: L + (yr - years[0]) / (years[-1] - years[0]) * (R - L)
+    y = lambda v: B - v / YMAX * (B - T)
+    out = [f'<svg class="hero-svg" viewBox="0 0 {W} {H + 26}" role="img" aria-labelledby="hc-title hc-desc">',
+           '<title id="hc-title">Share of Nigerian households with a mobile phone, electricity, and internet access, 2010 to 2022</title>']
+    first = {k: e["cells"][f"{years[0]}|All|All"][k] for k, *_ in series}
+    last = {k: e["cells"][f"{years[-1]}|All|All"][k] for k, *_ in series}
+    out.append('<desc id="hc-desc">' + "; ".join(
+        f"{lab}: {first[k]:.0f}% in {years[0]}, {last[k]:.0f}% in {years[-1]}" for k, lab, *_ in series) + ".</desc>")
+    for g in range(0, YMAX + 1, 25):
+        out.append(f'<line class="grid" x1="{L}" x2="{R}" y1="{y(g):.1f}" y2="{y(g):.1f}"/>')
+        out.append(f'<text class="axis" x="{L - 6}" y="{y(g) + 4:.1f}" text-anchor="end">{g}{"%" if g == YMAX else ""}</text>')
+    for yr in years:
+        out.append(f'<text class="axis" x="{x(yr):.1f}" y="{B + 20}" text-anchor="middle">{yr}</text>')
+    for i, (k, lab, col, hot) in enumerate(series):
+        pts = [(x(yr), y(e["cells"][f"{yr}|All|All"][k])) for yr in years]
+        d = "M" + " L".join(f"{px:.1f},{py:.1f}" for px, py in pts)
+        cls = "line line--hot" if hot else "line"
+        out.append(f'<path class="{cls}" style="--i:{i}" d="{d}" stroke="{col}" pathLength="1"/>')
+        ex, ey = pts[-1]
+        out.append(f'<circle class="dot" style="--i:{i}" cx="{ex:.1f}" cy="{ey:.1f}" r="3.5" fill="{col}"/>')
+        out.append(f'<text class="end-label" style="--i:{i}" x="{ex + 9:.1f}" y="{ey + 4:.1f}" fill="{col}">'
+                   f'{lab} <tspan class="end-value">{last[k]:.0f}%</tspan></text>')
+    out.append("</svg>")
+    path = Path("includes/hero-chart.html")
+    path.write_text("\n".join(out) + "\n", encoding="utf-8")
+    print(f"wrote {path}")
+
+
 if __name__ == "__main__":
-    build_ft()
-    build_gras()
-    build_energy()
-    build_fraud()
+    import sys
+    if "--chart-only" not in sys.argv:
+        build_ft()
+        build_gras()
+        build_energy()
+        build_fraud()
+    build_hero_chart()

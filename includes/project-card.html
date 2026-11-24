@@ -1,8 +1,8 @@
 {%- assign card = include.project -%}
-<li class="project-item">
+<li class="project-item" data-skills="{{ card.tools | join: '|' | downcase }}">
   <a href="{{ card.url | relative_url }}">
     <span class="meta">{{ card.context }}{% if card.period and card.period != "" %} · {{ card.period }}{% endif %}</span>
-    <span class="project-title">{{ card.title }}</span>
+    <span class="project-title">{{ card.title }}<span class="arrow" aria-hidden="true"> →</span></span>
     <span class="project-summary">{{ card.tagline }}</span>
     <span class="project-tools">{% for t in card.tools limit: 4 %}{{ t }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if card.dashboard %}<span class="tag">Interactive dashboard</span>{% endif %}</span>
   </a>

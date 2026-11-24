@@ -17,6 +17,9 @@ layout: default
     {%- if page.takeaway %}
     <p class="case-lead">{{ page.takeaway }}</p>
     {%- endif %}
+    {%- if page.dashboard %}
+    <p class="case-jump"><a href="#dashboard">Explore the interactive dashboard ↓</a></p>
+    {%- endif %}
   </header>
 
   <div class="case-grid">

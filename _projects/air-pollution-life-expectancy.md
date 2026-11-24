@@ -15,10 +15,7 @@ metrics:
     label: country-years
   - value: "0.72"
     label: baseline R²
-links:
-  - label: Research paper
-    type: report
-    url: ""
+links: []
 note: ""
 ---
 

@@ -17,6 +17,7 @@ description: Interactive dashboards built from the data behind my projects.
     <button class="tab" type="button" role="tab" id="tab-{{ db.id }}" data-tab="{{ db.id }}"
             aria-controls="panel-{{ db.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"{% unless forloop.first %} tabindex="-1"{% endunless %}>{{ db.title }}</button>
     {%- endfor %}
+    <span class="tab-indicator" aria-hidden="true"></span>
   </div>
 
   {%- for db in profile.dashboards %}

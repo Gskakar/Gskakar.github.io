@@ -7,21 +7,36 @@ title: Home
 
 <section class="intro">
   <div class="intro-text">
-    <p class="kicker">Data analyst · Edmonton, Alberta</p>
+    <div class="intro-id">
+      <img class="avatar" src="{{ profile.headshot | relative_url }}" alt="" width="64" height="64">
+      <p class="kicker">Data analyst · Business intelligence<br>Edmonton, Alberta</p>
+    </div>
     <h1>{{ profile.name }}</h1>
     <p class="intro-lead">{{ profile.intro }}</p>
     <p>
-      I'm currently a Dashboard Development Intern at the AI Centre for Decision Analytics and a Research
-      Assistant at the University of Alberta. I graduate in December 2026 and I'm looking for full-time
-      data and BI roles starting January 2027.
+      I'm wrapping up a Dashboard Development internship at the AI Centre for Decision Analytics and a
+      research assistantship at the University of Alberta, both by December 2026, when I also graduate.
+      I'm looking for full-time data and BI roles from January 2027.
     </p>
     <p class="actions">
-      <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View projects</a>
-      <a class="btn" href="{{ profile.resume | relative_url }}" target="_blank" rel="noopener">Résumé (PDF)</a>
-      <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+      <a class="btn btn-primary" href="{{ '/dashboards/' | relative_url }}">Try a live dashboard</a>
+      <a class="btn" href="{{ '/projects/' | relative_url }}">View projects</a>
+      <a href="{{ profile.resume | relative_url }}" target="_blank" rel="noopener">Résumé (PDF)</a>
     </p>
   </div>
-  <img class="intro-photo" src="{{ profile.headshot | relative_url }}" alt="Portrait of {{ profile.name }}" width="320" height="400">
+
+  <figure class="hero-chart">
+    <figcaption class="chart-title">
+      <strong>Internet access in Nigerian homes rose sevenfold. Electricity barely moved.</strong>
+      <span>Share of surveyed households, 2010–2022 (unweighted)</span>
+    </figcaption>
+    {% include hero-chart.html %}
+    <p class="chart-source">
+      Source: Nigeria General Household Survey-Panel, five waves. My analysis for the
+      <a href="{{ '/projects/energy-trilemma-workbook/' | relative_url }}">energy and internet access project</a>.
+      <a href="{{ '/dashboards/' | relative_url }}#energy-trilemma">Explore the data</a>
+    </p>
+  </figure>
 </section>
 
 <section class="block">
@@ -29,7 +44,7 @@ title: Home
   <dl class="figures">
     {%- for s in profile.highlights %}
     <div>
-      <dt>{{ s.value }}</dt>
+      <dt{% if s.count %} data-count="{{ s.count }}" data-prefix="{{ s.prefix }}" data-suffix="{{ s.suffix }}" data-decimals="{{ s.decimals | default: 0 }}"{% endif %}>{{ s.value }}</dt>
       <dd>{{ s.label }} <a href="{{ s.link | relative_url }}">See project</a></dd>
     </div>
     {%- endfor %}
