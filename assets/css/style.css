@@ -1619,3 +1619,150 @@ main.wrap {
   background: var(--white);
   padding: 6px;
 }
+
+/* text for screen readers only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- number ticker (odometer-style digits) ---------- */
+.ticker {
+  line-height: 1;
+}
+
+.ticker-digits {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.tick {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.tick-strip {
+  display: block;
+  transform: translateY(0);
+  transition: transform 1.4s cubic-bezier(0.16, 0.84, 0.24, 1);
+  will-change: transform;
+}
+
+.tick-strip span {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  text-align: center;
+}
+
+.tick-static {
+  display: inline-block;
+  line-height: 1;
+  white-space: pre;
+}
+
+/* ---------- experience timeline ---------- */
+.timeline {
+  position: relative;
+  padding-left: 34px;
+}
+
+.timeline::before,
+.timeline-progress {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  border-radius: 2px;
+}
+
+.timeline::before {
+  background: var(--rule);
+}
+
+.timeline-progress {
+  display: none;
+  background: var(--accent);
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.has-timeline .timeline-progress {
+  display: block;
+}
+
+.timeline .role {
+  position: relative;
+}
+
+.timeline .role::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 0.32em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--rule-strong);
+}
+
+.timeline .role.is-reached::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.timeline .role:last-child {
+  margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .timeline-progress {
+    transition: transform 0.12s linear;
+  }
+
+  .timeline .role::before {
+    transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .timeline .role.is-reached::before {
+    box-shadow: 0 0 0 4px rgba(29, 92, 85, 0.12);
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 28px;
+  }
+
+  .timeline .role::before {
+    left: -27px;
+  }
+
+  .timeline::before,
+  .timeline-progress {
+    left: 6px;
+  }
+}
+
+@media print {
+  .timeline::before,
+  .timeline-progress,
+  .timeline .role::before {
+    display: none;
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+}

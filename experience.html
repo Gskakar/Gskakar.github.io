@@ -15,16 +15,22 @@ description: Data analytics, BI, and research roles, plus leadership experience.
 
 <section class="block block--first">
   <h2 class="block-title">Data and analytics</h2>
-  {%- for job in work %}
-  {% include role.html job=job %}
-  {%- endfor %}
+  <div class="timeline" data-timeline>
+    <span class="timeline-progress" aria-hidden="true"></span>
+    {%- for job in work %}
+    {% include role.html job=job %}
+    {%- endfor %}
+  </div>
 </section>
 
 <section class="block">
   <h2 class="block-title">Leadership</h2>
-  {%- for job in leadership %}
-  {% include role.html job=job %}
-  {%- endfor %}
+  <div class="timeline" data-timeline>
+    <span class="timeline-progress" aria-hidden="true"></span>
+    {%- for job in leadership %}
+    {% include role.html job=job %}
+    {%- endfor %}
+  </div>
 </section>
 
 <section class="block">

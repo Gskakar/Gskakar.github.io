@@ -84,33 +84,81 @@
     hub.classList.add("has-indicator");
   }
 
-  /* Count-up for headline numbers (dt[data-count]); the final text is already in the HTML. */
-  var counters = document.querySelectorAll("[data-count]");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (counters.length && !reduce && "IntersectionObserver" in window) {
-    var run = function (el) {
-      var target = parseFloat(el.getAttribute("data-count"));
-      var dec = parseInt(el.getAttribute("data-decimals") || "0", 10);
-      var pre = el.getAttribute("data-prefix") || "";
-      var suf = el.getAttribute("data-suffix") || "";
-      var final = el.textContent;
-      var t0 = null, dur = 1100;
-      var fmt = new Intl.NumberFormat("en-CA", { minimumFractionDigits: dec, maximumFractionDigits: dec });
-      var step = function (ts) {
-        if (t0 === null) t0 = ts;
-        var p = Math.min(1, (ts - t0) / dur);
-        var eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = pre + fmt.format(target * eased) + suf;
-        if (p < 1) requestAnimationFrame(step); else el.textContent = final;
-      };
-      requestAnimationFrame(step);
+
+  /* Number ticker: digits in headline figures (.figures dt) roll into place, odometer style,
+     when they scroll into view. The real value stays in the page as screen-reader text. */
+  var figures = Array.prototype.slice.call(document.querySelectorAll(".figures dt"));
+  if (figures.length && !reduce && "IntersectionObserver" in window) {
+    var make = function (tag, cls, text) {
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text != null) n.textContent = text;
+      return n;
     };
-    var seen = new IntersectionObserver(function (entries) {
+    var tickers = [];
+    figures.forEach(function (el) {
+      var text = el.textContent.trim();
+      if (!/\d/.test(text)) return;                     // "Exact", "Automated" stay as text
+      el.textContent = "";
+      el.classList.add("ticker");
+      el.appendChild(make("span", "sr-only", text));
+      var shown = make("span", "ticker-digits");
+      shown.setAttribute("aria-hidden", "true");
+      var strips = [];
+      text.split("").forEach(function (ch) {
+        if (/\d/.test(ch)) {
+          var col = make("span", "tick");
+          var strip = make("span", "tick-strip");
+          for (var k = 0; k < 20; k++) strip.appendChild(make("span", null, String(k % 10)));
+          col.appendChild(strip);
+          shown.appendChild(col);
+          strips.push({ strip: strip, stop: 10 + Number(ch) });  // one full turn, then the digit
+        } else {
+          shown.appendChild(make("span", "tick-static", ch));
+        }
+      });
+      el.appendChild(shown);
+      tickers.push({ el: el, strips: strips });
+    });
+    var spin = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
-        if (en.isIntersecting) { seen.unobserve(en.target); run(en.target); }
+        if (!en.isIntersecting) return;
+        spin.unobserve(en.target);
+        tickers.forEach(function (t) {
+          if (t.el !== en.target) return;
+          t.strips.forEach(function (s, i) {
+            s.strip.style.transitionDelay = (i * 90) + "ms";
+            s.strip.style.transform = "translateY(" + (-s.stop) + "em)";
+          });
+        });
       });
     }, { threshold: 0.6 });
-    counters.forEach(function (el) { seen.observe(el); });
+    tickers.forEach(function (t) { spin.observe(t.el); });
+  }
+
+  /* Experience timeline: the rail fills as you scroll, and each role's marker fills when reached. */
+  var timelines = Array.prototype.slice.call(document.querySelectorAll("[data-timeline]"));
+  if (timelines.length) {
+    var pendingTl = false;
+    var drawTimelines = function () {
+      pendingTl = false;
+      var line = window.innerHeight * 0.55;
+      var atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+      timelines.forEach(function (tl) {
+        var r = tl.getBoundingClientRect();
+        var p = reduce || atBottom ? 1 : Math.max(0, Math.min(1, (line - r.top) / r.height));
+        tl.querySelector(".timeline-progress").style.transform = "scaleY(" + p.toFixed(4) + ")";
+        tl.querySelectorAll(".role").forEach(function (role) {
+          role.classList.toggle("is-reached", reduce || atBottom || role.getBoundingClientRect().top < line);
+        });
+      });
+    };
+    var queueTl = function () { if (!pendingTl) { pendingTl = true; requestAnimationFrame(drawTimelines); } };
+    window.addEventListener("scroll", queueTl, { passive: true });
+    window.addEventListener("resize", queueTl);
+    document.documentElement.classList.add("has-timeline");
+    drawTimelines();
   }
 
   /* Projects page: filter by skill. Each button's data-match lists tool names (comma-separated). */
