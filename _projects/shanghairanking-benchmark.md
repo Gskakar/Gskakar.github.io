@@ -8,7 +8,7 @@ kind: work
 category: Data Science & Analytics
 context: AI4DA · Internship
 role: Dashboard Development Intern
-period: Apr 2026 – Dec 2026
+period: Apr 2026 – Nov 2026
 tools: [Python, Pandas, Selenium, Fuzzy matching, Plotly, Excel, GitHub]
 dashboard: gras-2025
 metrics:

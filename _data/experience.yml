@@ -11,9 +11,9 @@
   org: AI Centre for Decision Analytics (AI4DA)
   type: work
   start: Apr 2026
-  end: Dec 2026
+  end: Nov 2026
   location: Edmonton, AB
-  summary: Benchmarked the Alberta School of Business in the ShanghaiRanking and FT global rankings. Wrapping up by December.
+  summary: Benchmarked the Alberta School of Business in the ShanghaiRanking and FT global rankings. Wrapping up in November.
   highlights:
     - "Built a Python pipeline that **reproduced ShanghaiRanking's published scores exactly**."
     - "Modelled **what-if growth targets** and presented them to School of Business leadership."
