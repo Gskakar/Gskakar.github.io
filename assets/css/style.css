@@ -654,10 +654,7 @@ main.wrap {
 
 /* ---------- about ---------- */
 .about {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 56px;
-  align-items: start;
+  max-width: 680px;
 }
 
 .about-photos figure a {
@@ -665,10 +662,22 @@ main.wrap {
   cursor: zoom-in;
 }
 
+/* tall photo and wide photo share one row at equal height (2:3 and 4:3 → 1fr 2fr) */
+.about-photos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.about-photos figure {
+  margin: 0;
+}
+
 .about-photos img {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   border-radius: 4px;
 }
 
@@ -1080,8 +1089,7 @@ main.wrap {
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .intro,
-  .case-grid,
-  .about {
+  .case-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
   }
@@ -1406,19 +1414,6 @@ main.wrap {
 .figures dt {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-}
-
-/* about: portrait */
-.about-portrait {
-  margin: 0 0 24px;
-}
-
-.about-portrait img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 4px;
 }
 
 @media (max-width: 900px) {
